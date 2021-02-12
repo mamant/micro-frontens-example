@@ -16,7 +16,7 @@ const Navigation = () => {
   return (<React.Fragment>
     <StyledHeader>
       <Sidebar open={open} onClose={() => setOpen(false)} closeButtonLabel='close-button'>
-            <Sidebar.Header>Micro Finance app</Sidebar.Header>
+            <Sidebar.Header> <Link to='/invoices'>Micro Finance app</Link> </Sidebar.Header>
             <Link to='/invoices'>
               <Sidebar.NavItem
                 key="home"

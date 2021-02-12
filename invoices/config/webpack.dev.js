@@ -2,7 +2,7 @@ const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const commonConfig = require('./webpack.common');
-const pachageJson = require('../package.json');
+const packageJSON = require('../package.json');
 
 const devConfig = {
   mode: 'development',
@@ -20,7 +20,7 @@ const devConfig = {
         './InvoicingApp': './src/bootstrap'
       },
       //  shared: ['react', 'react-dom']
-      shared: pachageJson.dependencies
+      shared: packageJSON.dependencies
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
